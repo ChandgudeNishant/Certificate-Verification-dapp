@@ -72,7 +72,7 @@ const CertificateGenerator = () => {
 
     <FormContainer>
          <div className="details">
-        <label >Certificate ID:</label>
+        <label ><h2>Certificate ID:</h2></label>
         <input type="text" id = "CertificateId1" value={certificateId} onChange={(e) => setCertificateId(e.target.value)}  placeholder="Certificate ID" name="Certificate ID" required/>
         <button  onClick={getData}>Get Certificate Data</button>
         <button onClick={generateCertificate}>Generate Certificate</button>
@@ -85,6 +85,7 @@ const CertificateGenerator = () => {
           <p id="expiryYear">{certificateData.expirationYear}</p>
           <p id="certificateId">{certificateId}</p>
           <img src={Cert} alt="Certificate" />
+
         
       </div>
       </div>
@@ -95,9 +96,9 @@ const CertificateGenerator = () => {
 export default CertificateGenerator;
 
 const FormContainer = styled.div`
-background-color: #131324;
+background-color: #FFFFFF;
 position: relative;
-
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,9 +109,10 @@ position: relative;
     position: relative;
     display: inline-block;
     display: flex;
+    height: auto;
     flex-direction: column;
     gap: 2rem;
-    background-color: #00000076;
+    background-color: #FFFFFF;
     padding: 3rem 5rem;
     align-items: center;
    img {
@@ -118,14 +120,15 @@ position: relative;
     margin-top:10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
     width: 60%;
   }
   #name {
     font-family: 'Halimun', sans-serif;
     font-size: calc(10px + 2vmin);
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 52%;
+    left: 61%;
     width: 980px; 
     height: 140px; 
     transform: translate(-50%, 50%);
@@ -133,8 +136,8 @@ position: relative;
   #orgName {
     position: absolute;
     font-size: calc(8px + 2vmin);
-    top: 50%;
-    left: 50%;
+    top: 51%;
+    left: 61%;
     width: 985px; 
     height: 345px; 
     transform: translate(-50%, 50%);
@@ -143,8 +146,8 @@ position: relative;
   #courseName {
     position: absolute;
     font-size: calc(8px + 2vmin);
-    top: 50%;
-    left: 50%;
+    top: 47%;
+    left: 61%;
     width: 985px; 
     height: 530px; 
     transform: translate(-50%, 50%);
@@ -152,8 +155,8 @@ position: relative;
   #expiryYear {
     position: absolute;
     font-size: calc(8px + 2vmin);
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 61%;
     width: 985px; 
     height: 710px; 
     transform: translate(-50%, 50%);
@@ -161,8 +164,8 @@ position: relative;
   #certificateId {
     position: absolute;
     font-size: calc(8px + 2vmin);
-    top: 50%;
-    left: 50%;
+    top: 42%;
+    left: 61%;
     width: 985px; 
     height: 885px; 
     transform: translate(-50%, 50%);
@@ -174,8 +177,8 @@ position: relative;
   }
 label{
   align-items: center;
-
-  color: white;
+  
+  color: Black;
 }
 
 input {
@@ -183,7 +186,7 @@ input {
   padding: 1rem;
   border: 0.1rem solid #4e0eff;
   border-radius: 0.4rem;
-  color: white;
+  color: Black;
   width: 60%;
   font-size: 1rem;
   &:focus {
