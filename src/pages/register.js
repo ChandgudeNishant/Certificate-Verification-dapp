@@ -139,22 +139,24 @@ const getData = async () => {
       <label>Expiration Year</label>
       <input type="text" id='ExpeiryYear'
         placeholder="Expiration Year"  name="Expiration Year" required/>
+         <button className="button1" type="submit" onClick={generateCertificate}> register</button>
     </form>
-    <button className="button1" type="submit" onClick={generateCertificate}> register</button>
+   
       </div>
-      <button className='button2' onClick={() => {navigate('/down')}}> GenerateCertificate</button>
+      
       
       
       <div className='data1'>
-        <button className="button" onClick={getData}>Get Certificate Data</button>
         <label>Certificate ID</label>
       <input type="text" id = "CertificateId1" placeholder="Certificate ID" name="Certificate ID" required/>
+      <button className="button" onClick={getData}>Get Certificate Data</button>
           <h2>Certificate Data:</h2>
           <p>Candidate Name: <span className='data'>{certificateData.candidateName}</span></p>
           <p>Organization Name: <span className='data'>{certificateData.orgName}</span></p>
           <p>Course Name: <span className='data'>{certificateData.courseName}</span></p>
           <p>Expiration Year: <span className='data'>{certificateData.expirationYear}</span></p>
       </div>
+      <button className='button2' onClick={() => {navigate('/down')}}> Generate Certificate</button>
     </FormContainer> 
 
   );
@@ -196,13 +198,17 @@ height: auto;
 
   }
   .data1{  
-    margin-top:50px;
+    height: auto;
+    width: 1100px;
+    justify-items: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     background-color: #00000076;
     border-radius: 2rem;
     padding: 3rem 5rem;
+    margin-top:50px;
+    margin-bottom: 10px;
     border: 0.1rem solid #4e0eff;
 
     h2 {
@@ -221,10 +227,14 @@ height: auto;
   .button{
     margin-right: 10px;
     margin-left: 10px;
+    position:bottom
   }
 
   form {
-    height: 100vh;
+    margin-top :50px;
+    margin-right:50px;
+    margin-left: 50px;
+    height: auto;
     display: flex;
     justify-items: center;
     flex-direction: column;
@@ -232,6 +242,7 @@ height: auto;
     background-color: #00000076;
     border-radius: 2rem;
     padding: 3rem 5rem;
+    border: 0.1rem solid #4e0eff;
   }
 
   .forms {
@@ -239,7 +250,7 @@ height: auto;
   }
 
   .button1{
-    position: absolute;
+    position: bottom;
     bottom: 2rem;
     left: 15rem;
     margin-bottom: 2rem;
@@ -287,7 +298,8 @@ height: auto;
     }
     
   }.button2{
-     margin-top:50px;
+     margin-top:10px;
+     margin-bottom: 10px;
       align-items: center;
 
     }
